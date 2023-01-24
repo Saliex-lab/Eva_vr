@@ -15,17 +15,14 @@ namespace EVA
         /// Hovered object (its object script component).
         /// </summary>
         private Object hoverObject;
-
         /// <summary>
         /// Grabbed object (its object script component).
         /// </summary>
         private Object grabObject;
-        
         /// <summary>
         /// Selected object (its object script component).
         /// </summary>
         public Object selectedObject;
-        
         /// <summary>
         /// Control state.
         /// </summary>
@@ -40,12 +37,10 @@ namespace EVA
         /// The grabbed object's transform relative to the controller.
         /// </summary>
         Vector3 localGrabOffset = Vector3.zero;
-        
         /// <summary>
         /// Local grab rotation.
         /// </summary>
         Quaternion localGrabRotation = Quaternion.identity;
-        
         /// <summary>
         /// the raycast used to display a laser coming from the controller.
         /// </summary>
@@ -63,7 +58,7 @@ namespace EVA
         /// The main controller from OVRInput (usually Right, can be changed (many inputs won't change well)).
         /// </summary>
         public OVRInput.Controller controller;
-        
+
         /// <summary>
         /// GameObject containing the camera.
         /// </summary>
@@ -136,6 +131,12 @@ namespace EVA
         private bool isRemainStick;
 
         /// <summary>
+        /// If the stick was tilted last update.
+        /// </summary>
+        [SerializeField] private InputManager inputMana;
+
+
+        /// <summary>
         /// Property for the gallery mode.
         /// </summary>
         public InteractionMode GalleryMode
@@ -146,7 +147,7 @@ namespace EVA
             }
             set
             {
-                if(value == InteractionMode.EDITOR || value == InteractionMode.VISITOR || value == InteractionMode.VISITOR_ONLY)
+                if (value == InteractionMode.EDITOR || value == InteractionMode.VISITOR || value == InteractionMode.VISITOR_ONLY)
                 {
                     bool aActiver = false;
                     Vector3 positionActuelleMenu = new Vector3();
@@ -166,7 +167,7 @@ namespace EVA
                         aActiver = true;
                         mainMenu.GetComponent<UIManager>().Close();
                     }
-                    
+
                     switch (galleryMode)
                     {
                         case InteractionMode.EDITOR:
@@ -259,7 +260,7 @@ namespace EVA
         void Update()
         {
             // Open the mainMenu with the start button
-            if (state != ControlState.WallCreation &&(OVRInput.GetDown(OVRInput.Button.Start) || Input.GetKeyDown(KeyCode.Tab)))
+            if (state != ControlState.WallCreation && (OVRInput.GetDown(inputMana.getDownShortCut("MainMenu")) || Input.GetKeyDown(KeyCode.Tab)))
             {
                 if (mainMenu.GetComponent<Canvas>().enabled)
                 {
@@ -267,7 +268,7 @@ namespace EVA
                 }
                 else
                 {
-                    if(selectedObject is object)
+                    if (selectedObject is object)
                         unselectObject();
                     mainMenu.GetComponent<UIManager>().Open();
                 }
@@ -294,7 +295,7 @@ namespace EVA
                     else
                     {
                         // When selecting the void
-                        if (selectedObject && hoverObject == null && (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller)) || Input.GetKeyDown(KeyCode.LeftControl))
+                        if (selectedObject && hoverObject == null && (OVRInput.GetDown(inputMana.getDownShortCut("SelectVoid"), controller)) || Input.GetKeyDown(KeyCode.LeftControl))
                         {
                             Vector3 vector3 = laser.GetPosition(1) - laser.GetPosition(0);
                             if (vector3.magnitude < 10.0f)
@@ -303,7 +304,7 @@ namespace EVA
                         }
 
                         //if Oculus button B or Escape key are pressed
-                        if (OVRInput.GetDown(OVRInput.Button.Two) || Input.GetButtonDown("Cancel"))
+                        if (OVRInput.GetDown(inputMana.getDownShortCut("Escape")) || Input.GetButtonDown("Cancel"))
                         {
                             //if the canvas is enabled
                             if (mainMenu.GetComponent<Canvas>().enabled)
@@ -341,9 +342,9 @@ namespace EVA
                             }
                         }
 
-
-                        if (OVRInput.GetDown(OVRInput.Button.Four) && OVRInput.Get(OVRInput.Button.SecondaryHandTrigger) || Input.GetKeyDown(KeyCode.Delete))
+                        if (OVRInput.GetDown(inputMana.getDownShortCut("DeleteGrabOne"))  || Input.GetKeyDown(KeyCode.Delete))
                         {
+                            Debug.Log("Delete enter"); 
                             if (grabObject is object)
                             {
                                 DeleteGrabbedObject();
@@ -354,7 +355,7 @@ namespace EVA
                         if (hoverObject)
                         {
                             // If the Index Trigger is pressed, select the object
-                            if ((OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller) || Input.GetKeyDown(KeyCode.Space)) && hoverObject != selectedObject)
+                            if ((OVRInput.GetDown(inputMana.getDownShortCut("SelectObject"), controller) || Input.GetKeyDown(KeyCode.Space)) && hoverObject != selectedObject)
                             {
                                 // selecting
                                 if (selectedObject != null)
@@ -365,7 +366,7 @@ namespace EVA
                             }
 
                             // If the hand trigger is pressed, grab the object
-                            if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, controller))
+                            if (OVRInput.GetDown(inputMana.getDownShortCut("GrabObject"), controller))
                             {
                                 // grabbing
                                 grabObject = hoverObject;
@@ -374,7 +375,7 @@ namespace EVA
                                     unselectObject();
                                     selectObject();
                                 }
-                                if(selectedObject is null)
+                                if (selectedObject is null)
                                 {
                                     selectObject();
                                 }
@@ -388,24 +389,24 @@ namespace EVA
                         if (grabObject)
                         {
                             ManipulateObject(controllerPos, controllerRot);
-                            if (!OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, controller))
+                            if (!OVRInput.Get(inputMana.getDownShortCut("GrabObject"), controller))
                             {
                                 grabObject.ChangeParent(gallery);
                                 grabObject = null;
                             }
-                            if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controller))
+                            if (OVRInput.GetDown(inputMana.getDownShortCut("PinToWall"), controller))
                             {
                                 PinToWall(controllerPos, controllerRot);
                             }
                         }
 
                         // If the button B and the  left hand trigger is pressed, change the manipulation mode
-                        if((OVRInput.GetDown(OVRInput.Button.Two) && OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)) || Input.GetKeyDown(KeyCode.LeftAlt))
+                        if ((OVRInput.GetDown(inputMana.getDownShortCut("ManipulationModeTwo")) && OVRInput.Get(inputMana.getDownShortCut("ManipulationModeOne"))) || Input.GetKeyDown(KeyCode.LeftAlt))
                         {
                             if (manipulationMode == ManipulationMode.SCALING)
                             {
                                 manipulationMode = ManipulationMode.TRANSLATION;
-                                if(manipulationAxis == Axes.ALL)
+                                if (manipulationAxis == Axes.ALL)
                                 {
                                     manipulationAxis = Axes.X;
                                     TransformHandler.Axe = manipulationAxis;
@@ -420,7 +421,7 @@ namespace EVA
                             TransformHandler.ManipulationModeChanged = true;
                         }
                         // else if the button B is pressed, change the Axis
-                        else if (OVRInput.GetDown(OVRInput.Button.Two) || Input.GetKeyDown(KeyCode.Space))
+                        else if (OVRInput.GetDown(inputMana.getDownShortCut("ButtonB")) || Input.GetKeyDown(KeyCode.Space))
                         {
                             if (manipulationAxis == Axes.Z)
                             {
@@ -440,7 +441,7 @@ namespace EVA
                         if (selectedObject)
                         {
                             ManipulateSelectedObject(controllerPos, controllerRot);
-                            if (grabObject is null && OVRInput.GetUp(OVRInput.Button.One, controller) || Input.GetKeyUp(KeyCode.D))
+                            if (grabObject is null && OVRInput.GetUp(inputMana.getDownShortCut("DuplicateObject"), controller) || Input.GetKeyUp(KeyCode.D))
                             {
                                 Debug.Log("Bouton Duplication : ");
                                 Debug.Log(creator.GetComponent<EVA.Creator>().Duplicate(selectedObject.gameObject));
@@ -523,7 +524,7 @@ namespace EVA
                     {
                         Debug.Log("Set parent to wall.");
                         Debug.Log(grabObject.transform.parent);
-                        grabObject.transform.GetComponent<IPinnable>().Pin(wall,normal);
+                        grabObject.transform.GetComponent<IPinnable>().Pin(wall, normal);
                         Debug.Log(grabObject.transform.parent);
                     }
                 }
@@ -587,7 +588,7 @@ namespace EVA
                 hoverObject = null;
             }
             else
-            {       
+            {
                 foreach (RaycastHit hit in objectsHit)
                 {
                     float thisHitDistance = Vector3.Distance(hit.point, controllerPos);
@@ -599,8 +600,8 @@ namespace EVA
                     }
                 }
             }
-            
-            
+
+
 
             // if intersecting with an object, grab it
             Collider[] hitColliders = Physics.OverlapSphere(controllerPos, 0.05f);
@@ -655,7 +656,7 @@ namespace EVA
                     if (hit.collider.gameObject == grabObject.transform.parent.GetComponent<Wall>().plane)
                     {
                         grabObject.SetPosition(hit.point + hit.normal * 0.001f);
-                        grabObject.Rotate(deltaZRotation,Axes.Z);
+                        grabObject.Rotate(deltaZRotation, Axes.Z);
                     }
                 }
             }
@@ -677,7 +678,7 @@ namespace EVA
             {
                 Vector2 thumbstickR = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
                 float inputThumb = (Mathf.Abs(thumbstickR.x) > Math.Abs(thumbstickR.y) ? thumbstickR.x : thumbstickR.y);
-                if(inputThumb < 0.1 && inputThumb > -0.1)
+                if (inputThumb < 0.1 && inputThumb > -0.1)
                 {
                     isRemainStick = false;
                 }

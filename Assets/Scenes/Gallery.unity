@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 1189259315}
     - target: {fileID: 3413519566537879145, guid: d88a4fe0b9e33d44dadecf925f46af9d, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3413519566537879145, guid: d88a4fe0b9e33d44dadecf925f46af9d, type: 3}
       propertyPath: m_SortingOrder
@@ -4541,6 +4541,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3858e450869603543ab8ae48f34d97a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1934088321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3314534047499524408, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
+  m_PrefabInstance: {fileID: 2012672443499459139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de57b88eaa088584184367c14a2a5282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2030809044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1851629655320242842, guid: a8572cbd8a9747e48a9365dd327d8c8d, type: 3}
@@ -4931,9 +4942,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 223974226}
     - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
+      propertyPath: controller
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
       propertyPath: editorMenu
       value: 
       objectReference: {fileID: 223974226}
+    - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
+      propertyPath: input_Mana
+      value: 
+      objectReference: {fileID: 1934088321}
     - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
       propertyPath: modularMenu
       value: 
@@ -4943,21 +4962,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 172627993}
     - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
-      propertyPath: selectedObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
-      propertyPath: centerEyeAnchor
-      value: 
-      objectReference: {fileID: 1871953118}
-    - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
       propertyPath: visitorOnlyMenu
       value: 
       objectReference: {fileID: 40919614}
-    - target: {fileID: 1934088317, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
-      propertyPath: manipulationAxis
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2012672441674985649, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5013,6 +5020,6 @@ PrefabInstance:
     - target: {fileID: 3314534047499524408, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}
       propertyPath: textJSON
       value: 
-      objectReference: {fileID: 4900000, guid: ab99e10be3b922d49b2f83a7f796216a, type: 3}
+      objectReference: {fileID: 4900000, guid: 1f3c034fb018c114fa9a5f57c46a6bc3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74410dc74ff75bd40b3e0f5a12302b75, type: 3}

@@ -1,0 +1,51 @@
+{
+  "MainMenu": "Start",
+  "SelectVoid": "PrimaryIndexTrigger",
+
+  "Escape": "Two",
+
+  "DeleteGrabOne": "PrimaryHandTrigger",
+  "DeleteGrabTwo": "Four",
+
+  "SelectObject": "PrimaryIndexTrigger",
+  "SelectObjectKey": "Space",
+
+  "SelectTheVoidKey": "LeftControl",
+
+  "PinToWall": "PrimaryIndexTrigger",
+  "ManageWallCreationInputs": "PrimaryIndexTrigger",
+
+  "GrabObject": "PrimaryHandTrigger",
+  "UnGrabObject": "PrimaryHandTrigger",
+
+  "ChangeModeOne": "Two",
+  "ChangeModeTwo": "PrimaryHandTrigger",
+
+  "ScaleSelectedObject": "PrimaryHandTrigger",
+  "RotateSelectedObject": "PrimaryHandTrigger",
+  "TranslateSelectedObject": "PrimaryHandTrigger",
+
+  "ManageWallCreationInputsThree": "PrimaryHandTrigger",
+
+  "ManipulationModeOne": "PrimaryHandTrigger",
+  "ManipulationModeTwo": "Two",
+  "ManipulationModeKey": "LeftAlt",
+
+  "ButtonB": "Two",
+
+  "DuplicateObject": "One",
+  "DuplicateObjectKey": "D",
+
+  "ChangetheAxis": "Two",
+  "ChangetheAxisKey": "Space",
+
+  "ManageWallCreationInputsTwo": "Two",
+
+  "DeleteGrabFour": "Four",
+
+  "Double": {
+    "One": "tOne",
+    "Two": "tTwo"
+  }
+}
+

@@ -172,6 +172,8 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 114473266101150724}
   - component: {fileID: 3896147815887467277}
+  - component: {fileID: 7306822738602972096}
+  - component: {fileID: 6160740262061795539}
   m_Layer: 0
   m_Name: OVRCameraRig
   m_TagString: Untagged
@@ -300,6 +302,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textJSON: {fileID: 4900000, guid: 965e410f312a7814d8e907edf4c11697, type: 3}
+  myInputList:
+    MainMenu: 
+    SelectVoid: 
+    Escape: 
+    DeleteGrabOne: 
+    DeleteGrabTwo: 
+    SelectObject: 
+    GrabObject: 
+    PinToWall: 
+    ButtonB: 
+    ManipulationModeOne: 
+    ManipulationModeTwo: 
+    DuplicateObject: 
+--- !u!114 &7306822738602972096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e08877325b96947bcf772a7a2d33ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6160740262061795539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da032f5fc415dc444ae2c9b8ed9443c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100006
 GameObject:
   m_ObjectHideFlags: 0
