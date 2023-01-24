@@ -544,7 +544,7 @@ namespace EVA
                 if (controller == OVRInput.Controller.RTouch)
                 {
                     modularMenu.transform.SetParent(leftController.transform);
-                    modularMenu.transform.localPosition = new Vector3(0.15f, 0.2f, 0.1f);
+                    modularMenu.transform.localPosition = new Vector3(-3f, 0.2f, 0.1f);
                 }
                 else if (controller == OVRInput.Controller.LTouch)
                 {
