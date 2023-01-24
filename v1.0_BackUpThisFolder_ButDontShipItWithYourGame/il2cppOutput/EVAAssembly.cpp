@@ -280,6 +280,8 @@ struct UIVertexU5BU5D_tBC532486B45D071A520751A90E819C77BA4E3D2F;
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
+// InputManager/Inputs[]
+struct InputsU5BU5D_tEDEBE52A648B28DE75F707A6E0CF110CB4459472;
 // EVA.Outline/ListVector3[]
 struct ListVector3U5BU5D_tEFDB71BA5C838505D139F626880219E08C3A621C;
 // UnityEngine.AnimationClip
@@ -378,6 +380,8 @@ struct Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E;
 struct ImportSettings_t21F9355F0A3ED613F342558F9FA89931FDBF354C;
 // UnityEngine.UI.InputField
 struct InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140;
+// InputManager
+struct InputManager_t4CBD0F00E47B6701DDA68858AAFF1BB80D637BF4;
 // UnityEngine.Events.InvokableCallList
 struct InvokableCallList_t309E1C8C7CE885A0D2F98C84CEA77A8935688382;
 // EVA.Light
@@ -472,6 +476,8 @@ struct String_t;
 struct StringEvent_t38E53E6D365D371F970D386CD5159207EEF6A94E;
 // UnityEngine.UI.Text
 struct Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62;
+// UnityEngine.TextAsset
+struct TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69;
 // UnityEngine.TextGenerator
 struct TextGenerator_t85D00417640A53953556C01F9D4E7DDE1ABD8FEC;
 // UnityEngine.Texture
@@ -552,6 +558,10 @@ struct OnChangeEvent_tE4829F88300B0E0E0D1B78B453AF25FC1AA55E2F;
 struct OnValidateInput_t48916A4E9C9FD6204401FF0808C2B7A93D73418B;
 // UnityEngine.UI.InputField/SubmitEvent
 struct SubmitEvent_t1E0F5A2AB28D0DB55AE18E8DA99147D86492DD5D;
+// InputManager/InputList
+struct InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2;
+// InputManager/Inputs
+struct Inputs_t7AE974D311C74433B13D4F9C33122D1E8D4007CF;
 // EVA.Light/SerializedLight
 struct SerializedLight_t8EC38E9D9571EC5D3AC316CBCF2F45864F58DEFB;
 // EVA.ListFiles/<>c__DisplayClass13_0
@@ -626,6 +636,7 @@ IL2CPP_EXTERN_C RuntimeClass* IEnumerator_1_t8FF4E49A76FEC7973BEB84FBE07C130E31C
 IL2CPP_EXTERN_C RuntimeClass* IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* IPinnable_tDB4741BB491317989862E5B5AAB21D719A476B08_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ImportSettings_t21F9355F0A3ED613F342558F9FA89931FDBF354C_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InteractionMode_t5E6A70C7344CA8831568A12CD8C6A5E6BCE2A1B8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ListVector3_tE657DC74949602EEAE9B979FA85A25C37CF124E4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t43FB89B126C93A6B04630BC64C751BBE95AFEAF4_il2cpp_TypeInfo_var;
@@ -707,6 +718,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA763D9F95A405E8A48C05B83B5F42586FB417446
 IL2CPP_EXTERN_C String_t* _stringLiteralAF76631C9924DA21CC9961B508E27EB5D8012412;
 IL2CPP_EXTERN_C String_t* _stringLiteralB59F0EFCC2B82196C428CFD6D80A08F8B47573FC;
 IL2CPP_EXTERN_C String_t* _stringLiteralB92EF51E45166C91E2762DB6C9F27C8BD6EBE466;
+IL2CPP_EXTERN_C String_t* _stringLiteralCB545AF36FB274A0189C2979EB9EFAB8982D4AA6;
 IL2CPP_EXTERN_C String_t* _stringLiteralCB5FE77BFE169B94F1BA0D807AFEBBFE4BEB0DA5;
 IL2CPP_EXTERN_C String_t* _stringLiteralD110B09D5F11BB1591E5FEE36643D62BD2DEE64A;
 IL2CPP_EXTERN_C String_t* _stringLiteralD1418B66EFD4F2E84F8EE977170F5ACBF35CE35C;
@@ -799,6 +811,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentsInChildren_TisRende
 IL2CPP_EXTERN_C const RuntimeMethod* GameObject_GetComponentsInChildren_TisUISettings_t7081B99753F2A5A0DB87B69153AB4E9199B06C16_mBDFAC2D684D04F54811BBC12274B31A6505CEFFA_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1_Add_m4402F60A8F2D158EF69606DB856DD5F69576E18A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* HashSet_1__ctor_mFA95004A6015F536FEA661EBD61544C36CA69235_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisInputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_mD1F2297B88B3C61E1F4E90E791E08055B2A91CEE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisSaveData_t73C222D1E4C9190D45A5556F562580C93C683FDE_m2AA28E2EBE64FEC43CE76A0E25B801BF469827D6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisSerializedImage_tFDE73764A803E470675DC7B34AD79BC476D1A41D_m76275E62E2D0830D549209A1827B7FF5A010A8B2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* JsonUtility_FromJson_TisSerializedLight_t8EC38E9D9571EC5D3AC316CBCF2F45864F58DEFB_m80DDDA050203AC1B3B4F0E76641A95C11CB0B75A_RuntimeMethod_var;
@@ -1307,6 +1320,20 @@ struct U3CCreateWallU3Ed__20_tA08244E899AE536F3B9AC7A3A2A731D2AA63953A  : public
 	RuntimeObject* ___U3CU3E2__current_1;
 	// EVA.Creator EVA.Creator/<CreateWall>d__20::<>4__this
 	Creator_t2592E1DABAF2F0B8A7CC8040431D1F50E2AE498F* ___U3CU3E4__this_2;
+};
+
+// InputManager/InputList
+struct InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2  : public RuntimeObject
+{
+	// InputManager/Inputs[] InputManager/InputList::input
+	InputsU5BU5D_tEDEBE52A648B28DE75F707A6E0CF110CB4459472* ___input_0;
+};
+
+// InputManager/Inputs
+struct Inputs_t7AE974D311C74433B13D4F9C33122D1E8D4007CF  : public RuntimeObject
+{
+	// System.String InputManager/Inputs::test
+	String_t* ___test_0;
 };
 
 // EVA.ListFiles/<>c__DisplayClass13_0
@@ -3068,6 +3095,15 @@ struct Creator_t2592E1DABAF2F0B8A7CC8040431D1F50E2AE498F_StaticFields
 	int32_t ___semaphore_16;
 };
 
+// InputManager
+struct InputManager_t4CBD0F00E47B6701DDA68858AAFF1BB80D637BF4  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
+{
+	// UnityEngine.TextAsset InputManager::textJSON
+	TextAsset_t2C64E93DA366D9DE5A8209E1802FA4884AC1BD69* ___textJSON_4;
+	// InputManager/InputList InputManager::myInputList
+	InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* ___myInputList_5;
+};
+
 // EVA.ListFiles
 struct ListFiles_t783512BAD77B3CF91BF5DC19932518BB9DE6741F  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -4454,6 +4490,8 @@ struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918  : public RuntimeA
 };
 
 
+// T UnityEngine.JsonUtility::FromJson<System.Object>(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared (String_t* ___json0, const RuntimeMethod* method) ;
 // T UnityEngine.Component::GetComponentInChildren<System.Object>()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponentInChildren_TisRuntimeObject_mE483A27E876DE8E4E6901D6814837F81D7C42F65_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 // T[] UnityEngine.Component::GetComponentsInChildren<System.Object>()
@@ -4544,8 +4582,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_set_Item_m35C8C18BF5DF9A5C8867BF0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyValuePair_2__ctor_m4DB4716A722543BA1B924822286F593CB4AE6368_gshared (KeyValuePair_2_t86D9DFA4534415620BC2CEBABBA2D34ED9CC169E* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___key0, int32_t ___value1, const RuntimeMethod* method) ;
 // TKey System.Collections.Generic.KeyValuePair`2<UnityEngine.Vector3,System.Int32>::get_Key()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 KeyValuePair_2_get_Key_mBDC505D7DDCEB660D97DBCEBC16A3D8A32F57352_gshared_inline (KeyValuePair_2_t86D9DFA4534415620BC2CEBABBA2D34ED9CC169E* __this, const RuntimeMethod* method) ;
-// T UnityEngine.JsonUtility::FromJson<System.Object>(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared (String_t* ___json0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::Clear()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Clear_mE1EFF7C68491EE07D21EE9924475A559BF0A4773_gshared (Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::Add(TKey,TValue)
@@ -4573,6 +4609,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Stack_1_Pop_m2AFF69249659372F0
 // System.Void System.Collections.Generic.Stack`1<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Stack_1__ctor_m70E8EDA96A608CE9BAB7FC8313B233AADA573BD4_gshared (Stack_1_tAD790A47551563636908E21E4F08C54C0C323EB5* __this, const RuntimeMethod* method) ;
 
+// T UnityEngine.JsonUtility::FromJson<InputManager/InputList>(System.String)
+inline InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* JsonUtility_FromJson_TisInputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_mD1F2297B88B3C61E1F4E90E791E08055B2A91CEE (String_t* ___json0, const RuntimeMethod* method)
+{
+	return ((  InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared)(___json0, method);
+}
+// System.Void InputManager/InputList::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputList__ctor_m450D700E4FFA323720266968C9878D2451B39006 (InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.MonoBehaviour::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
+// System.Void System.Object::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // System.Boolean System.String::IsNullOrEmpty(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___value0, const RuntimeMethod* method) ;
 // System.Void System.ArgumentNullException::.ctor()
@@ -4908,8 +4955,6 @@ inline void List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC (List_1_tB951
 {
 	((  void (*) (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*, const RuntimeMethod*))List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared)(__this, method);
 }
-// System.Void UnityEngine.MonoBehaviour::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 // T UnityEngine.Object::Instantiate<UnityEngine.GameObject>(T)
 inline GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___original0, const RuntimeMethod* method)
 {
@@ -4971,8 +5016,6 @@ inline Artwork_tDCFAFC206F3DAC1DDA81195CA1F81AB44B2235FA* GameObject_GetComponen
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Artwork_SetDuplicateString_m3BE67741D5D49E65A5B5312E93C5008B78EC92F0_inline (Artwork_tDCFAFC206F3DAC1DDA81195CA1F81AB44B2235FA* __this, String_t* ___path0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Transform::set_rotation(UnityEngine.Quaternion)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___value0, const RuntimeMethod* method) ;
-// System.Void System.Object::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 // UnityEngine.GameObject EVA.Control::GetMainMenu()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* Control_GetMainMenu_mBFFC6F6EC9F8AE5740A6E7FC68FF025B28B22A17_inline (Control_t03341405D5084D4C45370ACF0E227A90B3D15A21* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
@@ -6058,6 +6101,86 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void InputManager::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputManager_Start_m50CFB7332E9631753A09E4D873A50E61D9F73BAD (InputManager_t4CBD0F00E47B6701DDA68858AAFF1BB80D637BF4* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisInputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_mD1F2297B88B3C61E1F4E90E791E08055B2A91CEE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCB545AF36FB274A0189C2979EB9EFAB8982D4AA6);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// myInputList = JsonUtility.FromJson<InputList>("InputManager.txt");
+		InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* L_0;
+		L_0 = JsonUtility_FromJson_TisInputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_mD1F2297B88B3C61E1F4E90E791E08055B2A91CEE(_stringLiteralCB545AF36FB274A0189C2979EB9EFAB8982D4AA6, JsonUtility_FromJson_TisInputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_mD1F2297B88B3C61E1F4E90E791E08055B2A91CEE_RuntimeMethod_var);
+		__this->___myInputList_5 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___myInputList_5), (void*)L_0);
+		// }
+		return;
+	}
+}
+// System.Void InputManager::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputManager__ctor_mE004DD3863F4981A218B105B48EC7A38C3716BC4 (InputManager_t4CBD0F00E47B6701DDA68858AAFF1BB80D637BF4* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// public InputList myInputList = new InputList();
+		InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* L_0 = (InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2*)il2cpp_codegen_object_new(InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		InputList__ctor_m450D700E4FFA323720266968C9878D2451B39006(L_0, NULL);
+		__this->___myInputList_5 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___myInputList_5), (void*)L_0);
+		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void InputManager/Inputs::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Inputs__ctor_mD6E95D3D916A69841D5284B87A56E9B608D8B4D5 (Inputs_t7AE974D311C74433B13D4F9C33122D1E8D4007CF* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void InputManager/InputList::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputList__ctor_m450D700E4FFA323720266968C9878D2451B39006 (InputList_t8F64BEFB75DE31DD986F43E71CD50B772A12BCF2* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
